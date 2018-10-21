@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class LoginViewController: UIViewController {
 
     let numberOfCharactersDisplay: Int = 3;
     @IBOutlet weak var nameTextBox: UITextField!
@@ -87,6 +87,10 @@ class ViewController: UIViewController {
             return
         }
         enableStateAndTabsButton(enabled: true);
+    }
+    
+    @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+        print("IM BACK")
     }
 
     fileprivate func isTextBoxTextGreaterThanThree(value: String) -> Bool {
