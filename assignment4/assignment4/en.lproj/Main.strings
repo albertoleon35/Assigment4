@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "3V5-bz-jEs"; */
+"3V5-bz-jEs.text" = "Name";
+
+/* Class = "UITextField"; placeholder = "Enter your password here"; ObjectID = "7jH-or-Ola"; */
+"7jH-or-Ola.placeholder" = "Enter your password here";
+
+/* Class = "UIButton"; normalTitle = "States"; ObjectID = "K28-TH-kcm"; */
+"K28-TH-kcm.normalTitle" = "States";
+
+/* Class = "UITextField"; placeholder = "Enter your name here"; ObjectID = "PdF-Og-164"; */
+"PdF-Og-164.placeholder" = "Enter your name here";
+
+/* Class = "UILabel"; text = "Password"; ObjectID = "hO6-jU-ewz"; */
+"hO6-jU-ewz.text" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Tabs"; ObjectID = "seO-Gy-5SO"; */
+"seO-Gy-5SO.normalTitle" = "Tabs";

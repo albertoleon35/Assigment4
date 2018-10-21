@@ -18,56 +18,54 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="RdX-Hp-p28" userLabel="Name">
-                                <rect key="frame" x="45" y="190" width="280" height="30"/>
+                                <rect key="frame" x="40" y="190" width="290" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V5-bz-jEs">
-                                        <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3V5-bz-jEs">
+                                        <rect key="frame" x="0.0" y="0.0" width="61.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PdF-Og-164">
-                                        <rect key="frame" x="93" y="0.0" width="187" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduzca su nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PdF-Og-164">
+                                        <rect key="frame" x="109.5" y="0.0" width="180.5" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <connections>
                                             <action selector="userFinishedEnteringName:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="5I0-kc-w28"/>
-                                            <action selector="userStartedTypingHisName:" destination="BYZ-38-t0r" eventType="editingChanged" id="WIO-tG-gT0"/>
                                         </connections>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="78" translatesAutoresizingMaskIntoConstraints="NO" id="zjM-Iu-aHh" userLabel="Buttons">
-                                <rect key="frame" x="110" y="380" width="155" height="30"/>
+                                <rect key="frame" x="90" y="380" width="195" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K28-TH-kcm">
-                                        <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
-                                        <state key="normal" title="States"/>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K28-TH-kcm">
+                                        <rect key="frame" x="0.0" y="0.0" width="84" height="30"/>
+                                        <state key="normal" title="Estados"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="seO-Gy-5SO">
-                                        <rect key="frame" x="122" y="0.0" width="33" height="30"/>
+                                        <rect key="frame" x="162" y="0.0" width="33" height="30"/>
                                         <state key="normal" title="Tabs"/>
                                     </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="XFz-kJ-Lj8" userLabel="Password">
-                                <rect key="frame" x="45" y="235" width="279" height="30"/>
+                                <rect key="frame" x="40" y="235" width="292.5" height="30"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO6-jU-ewz">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="30"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contrasena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hO6-jU-ewz">
+                                        <rect key="frame" x="0.0" y="0.0" width="88.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your password here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jH-or-Ola">
-                                        <rect key="frame" x="93" y="0.0" width="186" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduzca su contrasena" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7jH-or-Ola">
+                                        <rect key="frame" x="107.5" y="0.0" width="185" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         <connections>
                                             <action selector="userFinishedEnteringPassword:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="S1G-k3-NS8"/>
-                                            <action selector="userStartedTypingPassword:" destination="BYZ-38-t0r" eventType="editingChanged" id="tqW-zd-wjl"/>
                                         </connections>
                                     </textField>
                                 </subviews>
@@ -75,14 +73,14 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="zjM-Iu-aHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="110" id="0Wa-GH-aAv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zjM-Iu-aHh" secondAttribute="trailing" constant="110" id="1GR-JC-rnG"/>
+                            <constraint firstItem="zjM-Iu-aHh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="90" id="0Wa-GH-aAv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zjM-Iu-aHh" secondAttribute="trailing" constant="90" id="1GR-JC-rnG"/>
                             <constraint firstItem="RdX-Hp-p28" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="170" id="59V-ms-HRu"/>
-                            <constraint firstItem="XFz-kJ-Lj8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="GRF-xi-0gk"/>
+                            <constraint firstItem="XFz-kJ-Lj8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="GRF-xi-0gk"/>
                             <constraint firstItem="zjM-Iu-aHh" firstAttribute="top" secondItem="XFz-kJ-Lj8" secondAttribute="bottom" constant="115" id="Url-wS-zO6"/>
                             <constraint firstItem="XFz-kJ-Lj8" firstAttribute="top" secondItem="RdX-Hp-p28" secondAttribute="bottom" constant="15" id="dK4-SK-moS"/>
-                            <constraint firstItem="RdX-Hp-p28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="nr2-8r-x77"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RdX-Hp-p28" secondAttribute="trailing" constant="50" id="rmp-7r-acK"/>
+                            <constraint firstItem="RdX-Hp-p28" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="nr2-8r-x77"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="RdX-Hp-p28" secondAttribute="trailing" constant="45" id="rmp-7r-acK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

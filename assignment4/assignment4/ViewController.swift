@@ -53,6 +53,42 @@ class ViewController: UIViewController {
         enableStateAndTabsButton(enabled: true);
     }
     
+    
+    @IBAction func userStartedTypingHisName(_ sender: Any) {
+        guard let nameTextBoxValue = nameTextBox.text else {
+            enableStateAndTabsButton(enabled: false);
+            return;
+        }
+        guard isTextBoxTextGreaterThanThree(value: nameTextBoxValue) else {
+            enableStateAndTabsButton(enabled: false);
+            return;
+        }
+        
+        guard shouldIEnableStateAndTabsButtons() else {
+            enableStateAndTabsButton(enabled: false);
+            return
+        }
+        enableStateAndTabsButton(enabled: true);
+        
+    }
+    
+    @IBAction func userStartedTypingPassword(_ sender: Any) {
+        guard let passwordTextBoxValue = passwordTextBox.text else {
+            enableStateAndTabsButton(enabled: false);
+            return;
+        }
+        guard isTextBoxTextGreaterThanThree(value: passwordTextBoxValue) else {
+            enableStateAndTabsButton(enabled: false);
+            return;
+        }
+        
+        guard shouldIEnableStateAndTabsButtons() else {
+            enableStateAndTabsButton(enabled: false);
+            return
+        }
+        enableStateAndTabsButton(enabled: true);
+    }
+
     fileprivate func isTextBoxTextGreaterThanThree(value: String) -> Bool {
         let trimmedString = value.trimmingCharacters(in: .whitespaces)
         guard !trimmedString.isEmpty && trimmedString.count >= numberOfCharactersDisplay else {
