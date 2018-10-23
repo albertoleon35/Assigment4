@@ -90,7 +90,6 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
-        print("IM BACK")
     }
 
     fileprivate func isTextBoxTextGreaterThanThree(value: String) -> Bool {
