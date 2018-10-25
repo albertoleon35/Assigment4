@@ -8,12 +8,14 @@
 
 import Foundation
 
-class StatesRepository {
+class StatesRepository : StatesRepositoryProtocol {
     
     fileprivate let Abbreviation = "Abbreviation";
     fileprivate let State = "State";
     fileprivate let Capital = "Capital";
-    fileprivate let StateDate = "StateDate";
+    fileprivate let StateDay = "StateDay";
+    fileprivate let StateYear = "StateYear";
+    fileprivate let StateMonth = "StateMonth";
     
     public func retrieveStates() -> Array<StateDTO> {
         var states = Array<StateDTO>();
@@ -31,11 +33,13 @@ class StatesRepository {
                 guard let state = valueDictionary[self.State],
                     let capital = valueDictionary[self.Capital],
                     let abbreviation = valueDictionary[self.Abbreviation],
-                    let stateDate = valueDictionary[self.StateDate] else {
+                    let stateDay = valueDictionary[self.StateDay],
+                    let stateYear = valueDictionary[self.StateYear],
+                    let stateMonth = valueDictionary[self.StateMonth] else {
                     continue;
                 }
                     
-                let stateDTO = StateDTO(stateName: state, capital: capital, abbreviation: abbreviation, stateDate: stateDate);
+                let stateDTO = StateDTO(stateName: state, capital: capital, abbreviation: abbreviation, stateDay: stateDay, stateYear: stateYear, stateMonth: stateMonth);
                 states.append(stateDTO);
             }
             

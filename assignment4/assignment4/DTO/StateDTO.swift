@@ -12,13 +12,30 @@ struct StateDTO  {
     let stateName : String;
     let capital : String;
     let abbreviation : String;
-    let stateDate : String;
+    let stateDay : String;
+    let stateYear : String;
+    let stateMonth : String;
     
-    init(stateName: String, capital: String, abbreviation: String, stateDate: String) {
+    init() {
+        self.stateName = ""
+        self.capital = ""
+        self.abbreviation = ""
+        self.stateDay = ""
+        self.stateYear = ""
+        self.stateMonth = ""
+    }
+    
+    init(stateName: String, capital: String, abbreviation: String, stateDay: String, stateYear: String, stateMonth: String) {
         self.stateName = stateName;
         self.capital = capital;
         self.abbreviation = abbreviation;
-        self.stateDate = stateDate;
+        self.stateDay = stateDay;
+        self.stateYear = stateYear;
+        self.stateMonth = stateMonth;
+    }
+    
+    public func formattedDate() -> String {
+        return "\(self.stateMonth) \(self.stateDay), \(self.stateYear)";
     }
     
 }

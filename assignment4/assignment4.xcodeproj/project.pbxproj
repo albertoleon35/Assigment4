@@ -16,6 +16,9 @@
 		7A2454FA21780D210004E3D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A2454F821780D210004E3D1 /* LaunchScreen.storyboard */; };
 		7A24550521780D210004E3D1 /* assignment4Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24550421780D210004E3D1 /* assignment4Tests.swift */; };
 		7A24551021780D210004E3D1 /* assignment4UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A24550F21780D210004E3D1 /* assignment4UITests.swift */; };
+		7A2900ED217EE52C00F9E44A /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2900EC217EE52C00F9E44A /* StateViewController.swift */; };
+		7A7D03242180008F003DB0A4 /* StatesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D03232180008F003DB0A4 /* StatesRepositoryProtocol.swift */; };
+		7A7D0326218000F2003DB0A4 /* StatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D0325218000F2003DB0A4 /* StatesServiceProtocol.swift */; };
 		7AD8BECF217D2215008B47F3 /* States.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7AD8BECE217D2215008B47F3 /* States.plist */; };
 		7AD8BED2217D286F008B47F3 /* StateDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8BED1217D286F008B47F3 /* StateDTO.swift */; };
 		7AD8BED5217D2A21008B47F3 /* StatesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD8BED4217D2A21008B47F3 /* StatesService.swift */; };
@@ -57,6 +60,9 @@
 		7A26ACF921795FD800ED7532 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		7A26ACFB2179600B00ED7532 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		7A26AD042179681700ED7532 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = es; path = es.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7A2900EC217EE52C00F9E44A /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
+		7A7D03232180008F003DB0A4 /* StatesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesRepositoryProtocol.swift; sourceTree = "<group>"; };
+		7A7D0325218000F2003DB0A4 /* StatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesServiceProtocol.swift; sourceTree = "<group>"; };
 		7AD8BECE217D2215008B47F3 /* States.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = States.plist; sourceTree = "<group>"; };
 		7AD8BED1217D286F008B47F3 /* StateDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateDTO.swift; sourceTree = "<group>"; };
 		7AD8BED4217D2A21008B47F3 /* StatesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesService.swift; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				7A1284AE217D47DF00B01363 /* StatesRepository.swift */,
+				7A7D03232180008F003DB0A4 /* StatesRepositoryProtocol.swift */,
 			);
 			path = repository;
 			sourceTree = "<group>";
@@ -152,6 +159,7 @@
 			children = (
 				7A2454F121780D200004E3D1 /* LoginViewController.swift */,
 				7A0382F4217EA65600D339EE /* StatesTableViewController.swift */,
+				7A2900EC217EE52C00F9E44A /* StateViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -179,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				7AD8BED4217D2A21008B47F3 /* StatesService.swift */,
+				7A7D0325218000F2003DB0A4 /* StatesServiceProtocol.swift */,
 			);
 			path = services;
 			sourceTree = "<group>";
@@ -319,8 +328,11 @@
 				7A1284AF217D47DF00B01363 /* StatesRepository.swift in Sources */,
 				7AD8BED2217D286F008B47F3 /* StateDTO.swift in Sources */,
 				7A0382F5217EA65600D339EE /* StatesTableViewController.swift in Sources */,
+				7A7D0326218000F2003DB0A4 /* StatesServiceProtocol.swift in Sources */,
+				7A2900ED217EE52C00F9E44A /* StateViewController.swift in Sources */,
 				7AD8BED5217D2A21008B47F3 /* StatesService.swift in Sources */,
 				7A2454F021780D200004E3D1 /* AppDelegate.swift in Sources */,
+				7A7D03242180008F003DB0A4 /* StatesRepositoryProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
