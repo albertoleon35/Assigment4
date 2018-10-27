@@ -12,8 +12,8 @@ class StatesTableViewController: UITableViewController {
     
     let cellIdentifier = "StateCell"
     let segueToStateControllerIdentifier = "toStateViewController"
-    var states: Array<StateDTO> = Array<StateDTO>();
-    var state: StateDTO = StateDTO();
+    var states: Array<StateDomain> = Array<StateDomain>();
+    var state: StateDomain = StateDomain();
 
     override func viewDidLoad() {
         super.viewDidLoad()

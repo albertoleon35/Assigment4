@@ -9,5 +9,5 @@
 import Foundation
 
 protocol StatesRepositoryProtocol {
-    func retrieveStates() -> Array<StateDTO>
+    func retrieveStates() -> Array<StateDomain>
 }

@@ -10,7 +10,9 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    let segueToLoginViewControllerIdentifier = "toLoginViewFromNameTabController"
     let numberOfCharactersDisplay: Int = 3;
+    var userName = "";
     @IBOutlet weak var nameTextBox: UITextField!
     @IBOutlet weak var passwordTextBox: UITextField!
     @IBOutlet weak var stateButton: UIButton!
@@ -89,7 +91,27 @@ class LoginViewController: UIViewController {
         enableStateAndTabsButton(enabled: true);
     }
     
+    
     @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
+        if segue.identifier == segueToLoginViewControllerIdentifier {
+            
+            guard let nameTextBoxValue = nameTextBox.text else {
+                return;
+            }
+            
+            guard self.userName.count >= 3 else {
+                nameTextBox.text = userName
+                enableStateAndTabsButton(enabled: false)
+                return;
+            }
+            
+            guard nameTextBoxValue.lowercased() != userName.lowercased()  else {
+                return;
+            }
+            nameTextBox.text = userName
+            
+        }
+        
     }
 
     fileprivate func isTextBoxTextGreaterThanThree(value: String) -> Bool {

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct StateDTO  {
+struct StateDomain  {
     let stateName : String;
     let capital : String;
     let abbreviation : String;

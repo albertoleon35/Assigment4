@@ -17,8 +17,8 @@ class StatesRepository : StatesRepositoryProtocol {
     fileprivate let StateYear = "StateYear";
     fileprivate let StateMonth = "StateMonth";
     
-    public func retrieveStates() -> Array<StateDTO> {
-        var states = Array<StateDTO>();
+    public func retrieveStates() -> Array<StateDomain> {
+        var states = Array<StateDomain>();
         
         if let path = Bundle.main.path(forResource: "States", ofType: "plist"),
             let arrayOfStates = NSArray(contentsOfFile: path){
@@ -39,8 +39,8 @@ class StatesRepository : StatesRepositoryProtocol {
                     continue;
                 }
                     
-                let stateDTO = StateDTO(stateName: state, capital: capital, abbreviation: abbreviation, stateDay: stateDay, stateYear: stateYear, stateMonth: stateMonth);
-                states.append(stateDTO);
+                let stateDomain = StateDomain(stateName: state, capital: capital, abbreviation: abbreviation, stateDay: stateDay, stateYear: stateYear, stateMonth: stateMonth);
+                states.append(stateDomain);
             }
             
         }
