@@ -19,6 +19,8 @@
 		7A2900ED217EE52C00F9E44A /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2900EC217EE52C00F9E44A /* StateViewController.swift */; };
 		7A7D03242180008F003DB0A4 /* StatesRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D03232180008F003DB0A4 /* StatesRepositoryProtocol.swift */; };
 		7A7D0326218000F2003DB0A4 /* StatesServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A7D0325218000F2003DB0A4 /* StatesServiceProtocol.swift */; };
+		7A81F46221868FD4008FF90E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A81F46121868FD4008FF90E /* MapKit.framework */; };
+		7A81F4652186A6F9008FF90E /* AnnotatedLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A81F4642186A6F9008FF90E /* AnnotatedLocation.swift */; };
 		7A958B2821814F08008FEA44 /* NameTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A958B2721814F08008FEA44 /* NameTabViewController.swift */; };
 		7A958B2A21814F32008FEA44 /* SportsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A958B2921814F32008FEA44 /* SportsTabViewController.swift */; };
 		7A958B2C21814F54008FEA44 /* MapTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A958B2B21814F54008FEA44 /* MapTabViewController.swift */; };
@@ -66,6 +68,8 @@
 		7A2900EC217EE52C00F9E44A /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
 		7A7D03232180008F003DB0A4 /* StatesRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesRepositoryProtocol.swift; sourceTree = "<group>"; };
 		7A7D0325218000F2003DB0A4 /* StatesServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatesServiceProtocol.swift; sourceTree = "<group>"; };
+		7A81F46121868FD4008FF90E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7A81F4642186A6F9008FF90E /* AnnotatedLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnnotatedLocation.swift; sourceTree = "<group>"; };
 		7A958B2721814F08008FEA44 /* NameTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTabViewController.swift; sourceTree = "<group>"; };
 		7A958B2921814F32008FEA44 /* SportsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportsTabViewController.swift; sourceTree = "<group>"; };
 		7A958B2B21814F54008FEA44 /* MapTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A81F46221868FD4008FF90E /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +120,7 @@
 				7A24550321780D210004E3D1 /* assignment4Tests */,
 				7A24550E21780D210004E3D1 /* assignment4UITests */,
 				7A2454ED21780D200004E3D1 /* Products */,
+				7A81F46021868FD4008FF90E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +137,7 @@
 		7A2454EE21780D200004E3D1 /* assignment4 */ = {
 			isa = PBXGroup;
 			children = (
+				7A81F4632186A6B8008FF90E /* map */,
 				7AD8BED0217D285D008B47F3 /* Domain */,
 				7A1284AD217D47C900B01363 /* repository */,
 				7AD8BED3217D2A0E008B47F3 /* services */,
@@ -158,6 +165,22 @@
 				7A24551121780D210004E3D1 /* Info.plist */,
 			);
 			path = assignment4UITests;
+			sourceTree = "<group>";
+		};
+		7A81F46021868FD4008FF90E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A81F46121868FD4008FF90E /* MapKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7A81F4632186A6B8008FF90E /* map */ = {
+			isa = PBXGroup;
+			children = (
+				7A81F4642186A6F9008FF90E /* AnnotatedLocation.swift */,
+			);
+			path = map;
 			sourceTree = "<group>";
 		};
 		7AD8BECC217D2190008B47F3 /* controllers */ = {
@@ -270,6 +293,11 @@
 				TargetAttributes = {
 					7A2454EB21780D200004E3D1 = {
 						CreatedOnToolsVersion = 10.0;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					7A2454FF21780D210004E3D1 = {
 						CreatedOnToolsVersion = 10.0;
@@ -338,6 +366,7 @@
 				7A958B2C21814F54008FEA44 /* MapTabViewController.swift in Sources */,
 				7A1284AF217D47DF00B01363 /* StatesRepository.swift in Sources */,
 				7AD8BED2217D286F008B47F3 /* StateDomain.swift in Sources */,
+				7A81F4652186A6F9008FF90E /* AnnotatedLocation.swift in Sources */,
 				7A958B2821814F08008FEA44 /* NameTabViewController.swift in Sources */,
 				7A0382F5217EA65600D339EE /* StatesTableViewController.swift in Sources */,
 				7A7D0326218000F2003DB0A4 /* StatesServiceProtocol.swift in Sources */,

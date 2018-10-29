@@ -16,8 +16,7 @@ class NameTabViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setUserName(name: userName)
     }
     
     @IBAction func userStartedTypingUserName(_ sender: Any) {
@@ -57,6 +56,13 @@ class NameTabViewController: UIViewController {
             
             loginViewController.userName = self.userName;
         }
+    }
+    
+    fileprivate func setUserName(name: String) {
+        guard !self.userName.isEmpty  else {
+            return;
+        }
         
+        userNameTextBox.text = userName;
     }
 }

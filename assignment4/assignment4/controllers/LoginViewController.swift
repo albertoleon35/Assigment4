@@ -11,6 +11,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     let segueToLoginViewControllerIdentifier = "toLoginViewFromNameTabController"
+    let segueToTabViewController = "toTabViewController"
     let numberOfCharactersDisplay: Int = 3;
     var userName = "";
     @IBOutlet weak var nameTextBox: UITextField!
@@ -22,42 +23,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
     }
 
-    @IBAction func userFinishedEnteringName(_ sender: Any) {
-        guard let nameTextBoxValue = nameTextBox.text else {
-            enableStateAndTabsButton(enabled: false);
-            return;
-        }
-        guard isTextBoxTextGreaterThanThree(value: nameTextBoxValue) else {
-            enableStateAndTabsButton(enabled: false);
-            return;
-        }
-        guard shouldIEnableStateAndTabsButtons() else {
-            enableStateAndTabsButton(enabled: false);
-            return
-        }
-        enableStateAndTabsButton(enabled: true);
-    }
-    
-    @IBAction func userFinishedEnteringPassword(_ sender: Any) {
-        guard let nameTextBoxValue = nameTextBox.text else {
-            enableStateAndTabsButton(enabled: false);
-            return;
-        }
-        guard isTextBoxTextGreaterThanThree(value: nameTextBoxValue) else {
-            enableStateAndTabsButton(enabled: false);
-            return;
-        }
-        
-        guard shouldIEnableStateAndTabsButtons() else {
-            enableStateAndTabsButton(enabled: false);
-            return
-        }
-        enableStateAndTabsButton(enabled: true);
-    }
-    
-    
     @IBAction func userStartedTypingHisName(_ sender: Any) {
-        guard let nameTextBoxValue = nameTextBox.text else {
+            guard let nameTextBoxValue = nameTextBox.text else {
             enableStateAndTabsButton(enabled: false);
             return;
         }
@@ -71,7 +38,6 @@ class LoginViewController: UIViewController {
             return
         }
         enableStateAndTabsButton(enabled: true);
-        
     }
     
     @IBAction func userStartedTypingPassword(_ sender: Any) {
@@ -91,11 +57,27 @@ class LoginViewController: UIViewController {
         enableStateAndTabsButton(enabled: true);
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier ==  segueToTabViewController {
+            let tabBarController = segue.destination as! UITabBarController
+            
+            for viewController in tabBarController.viewControllers! {
+                if let nameTabViewController = viewController as? NameTabViewController {
+                    nameTabViewController.userName = self.userName;
+                }
+            }
+        }
+    }
+    
     
     @IBAction func unwindToLoginViewController(segue: UIStoryboardSegue) {
         if segue.identifier == segueToLoginViewControllerIdentifier {
             
             guard let nameTextBoxValue = nameTextBox.text else {
+                return;
+            }
+            
+            guard !userName.trimmingCharacters(in: .whitespaces).isEmpty else {
                 return;
             }
             
@@ -109,9 +91,7 @@ class LoginViewController: UIViewController {
                 return;
             }
             nameTextBox.text = userName
-            
         }
-        
     }
 
     fileprivate func isTextBoxTextGreaterThanThree(value: String) -> Bool {
@@ -135,6 +115,7 @@ class LoginViewController: UIViewController {
         guard name.count >= numberOfCharactersDisplay  && password.count >= numberOfCharactersDisplay else {
             return false;
         }
+        self.userName = nameTextBoxValue;
         return true;
     }
     
@@ -142,7 +123,4 @@ class LoginViewController: UIViewController {
         stateButton.isEnabled = value;
         tabButton.isEnabled = value;
     }
-    
-    
 }
-
